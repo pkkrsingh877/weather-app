@@ -66,4 +66,17 @@ Something like this should be in the .env file.
     - Create a templates folder
         - Create index.html and add the html code from above index.html file
 
-## 10. 
+## 10. Start writing python code for  called weather.py
+
+## 11. Create server.py file for creating routes and starting server, also handling requests
+
+## 12. Important Package
+    
+    Download a package named waitress which will help in allowing application be ready for production
+
+    ```
+    pip install waitress
+    pip freeze > requirements.txt
+    ```
+
+    Because we added new package, it becomes important to update the requirements file so we can use newly added packages.
