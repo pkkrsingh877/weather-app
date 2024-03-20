@@ -13,6 +13,12 @@ def get_current_weather(city="Kansas City"):
 if __name__ == "__main__":
     print('\n*** Get Current Weather Conditions ***\n')
     city = input("\nPlease enter a city name: ")
+    
+    # Check of empty spaces or empty string
+
+    if not bool(city.strip()):
+        city = "Kyoto"
+    
     weather_data = get_current_weather(city)
     print('\n')
     pprint(weather_data)

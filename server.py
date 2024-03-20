@@ -12,7 +12,16 @@ def index():
 @app.route('/weather')
 def get_weather():
     city = request.args.get('city')
+    # Check of empty spaces or empty string
+
+    if not bool(city.strip()):
+        city = "Kyoto"
+    
     weather_data = get_current_weather(city)
+
+    if not weather_data['cod'] == 200:
+        return render_template('city_not_found.html')
+    
 
     return render_template(
         "weather.html",
